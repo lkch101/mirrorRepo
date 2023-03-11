@@ -19,9 +19,5 @@ echo "192.168.x.x  repo.lkc.local" >> /etc/hosts
 # /usr/share/nginx/html/mirrors
 rm -fr /etc/yum.repos.d/*.repo
 wget -O /etc/yum.repos.d/mirrors.repo http://repo.lkc.local/mirrors/mirrors.repo
-
-# change info 
-vim /etc/yum.repos.d/mirrors.repo
-baseurl=http://${192.168.1.1:80}/mirrors/centos/
 ```
 
