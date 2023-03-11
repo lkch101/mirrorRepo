@@ -1,5 +1,40 @@
-[yumbase]
-name=yumbase-local-repository
-baseurl=http://192.168.1.1:80/mirrors/centos/
+# vim /etc/hosts
+# 192.168.1.1 repo.lkc.local 
+
+
+[base]
+# name=CentOS-$releasever - Base
+name=CentOS-7 - Base
+baseurl=http://repo.lkc.local/mirrors/centos/7/os/x86_64/Packages/
+enabled=1
+gpgcheck=0
+
+[updates]
+#name=CentOS-$releasever - Updates
+name=CentOS-7 - Updates
+baseurl=http://repo.lkc.local/mirrors/centos/7/updates/x86_64/Packages/
+enabled=1
+gpgcheck=0
+
+[extras]
+#name=CentOS-$releasever - Extras
+name=CentOS-7 - Extras
+baseurl=http://repo.lkc.local/mirrors/centos/7/extras/x86_64/Packages/
+enabled=1
+gpgcheck=0
+
+[centosplus]
+#name=CentOS-$releasever - Plus
+name=CentOS-7 - Plus
+baseurl=http://repo.lkc.local/mirrors/centos/7/centosplus/x86_64/Packages/
+enabled=1
+gpgcheck=0
+
+
+# kubernetes
+[kubernetes]
+#name=CentOS-$releasever - Plus
+name=CentOS-7 - kubernetes
+baseurl=http://repo.lkc.local/mirrors/centos/7/kubernetes/x86_64/Packages/
 enabled=1
 gpgcheck=0
