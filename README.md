@@ -3,7 +3,6 @@
 - started
 ```
 # -v $dir:/usr/share/nginx/html/mirrors/centos
-/usr/share/nginx/html/mirrors/centos
 
 # expose 80
 ```
@@ -14,9 +13,12 @@ sh update_repo_yum_tsinghua.sh
 ```
 - client server setting
 ```
+# vim /etc/hosts
+echo "192.168.x.x  repo.lkc.local" >> /etc/hosts
+
 # /usr/share/nginx/html/mirrors
 rm -fr /etc/yum.repos.d/*.repo
-wget -O /etc/yum.repos.d/mirrors.repo http://nginx:80/mirrors/mirrors.repo
+wget -O /etc/yum.repos.d/mirrors.repo http://repo.lkc.local/mirrors/mirrors.repo
 
 # change info 
 vim /etc/yum.repos.d/mirrors.repo
