@@ -1,10 +1,13 @@
 # mirrorRepo
 # docker centos7 repo x86_64
-- workdir
+- started
 ```
-/usr/share/nginx/html/mirrors/
+# -v $dir:/usr/share/nginx/html/mirrors/centos
+/usr/share/nginx/html/mirrors/centos
+
+# expose 80
 ```
-- update repo
+- docker exec && update repo
 ```
 cd /usr/share/nginx/html/mirrors
 sh update_repo_yum_tsinghua.sh
